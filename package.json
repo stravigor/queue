@@ -1,0 +1,26 @@
+{
+  "name": "@stravigor/queue",
+  "version": "0.5.6",
+  "type": "module",
+  "description": "Background job processing and task scheduling for the Strav framework",
+  "license": "MIT",
+  "keywords": ["bun", "framework", "typescript", "strav", "queue", "scheduler"],
+  "files": ["src/", "package.json", "tsconfig.json", "CHANGELOG.md"],
+  "exports": {
+    ".": "./src/index.ts",
+    "./queue": "./src/queue/index.ts",
+    "./queue/*": "./src/queue/*.ts",
+    "./scheduler": "./src/scheduler/index.ts",
+    "./scheduler/*": "./src/scheduler/*.ts",
+    "./providers": "./src/providers/index.ts",
+    "./providers/*": "./src/providers/*.ts"
+  },
+  "peerDependencies": {
+    "@stravigor/kernel": "workspace:*",
+    "@stravigor/database": "workspace:*"
+  },
+  "scripts": {
+    "test": "bun test tests/",
+    "typecheck": "tsc --noEmit"
+  }
+}
