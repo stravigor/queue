@@ -6,10 +6,12 @@ The queue module provides persistent, retryable background job processing backed
 
 ### Using a service provider (recommended)
 
-```typescript
-import { QueueProvider } from '@stravigor/core/providers'
+Add to `start/providers.ts`:
 
-app.use(new QueueProvider())
+```typescript
+import { QueueProvider } from '@stravigor/queue'
+
+new QueueProvider(),
 ```
 
 The `QueueProvider` registers `Queue` as a singleton and creates the queue tables automatically. It depends on the `database` provider.
